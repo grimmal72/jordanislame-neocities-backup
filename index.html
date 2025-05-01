@@ -39,8 +39,9 @@
                      
                      <p class="centering"><a href="/pages/90gameschallenge.html">The "Can I develop 90 games" challenge</a></p>
                      
-                     <p style="text-align: center;">&amp;</p>
-                     
+                     <p class="centering bougie-text">May 1st 2025 update:</p>
+		     <p class="centering removing-top-pad">Major overhaul upcoming! This site has sat dead since 2022, and was once on it's own domain, but never served by anything but Neocities. We're hitting escape velocity, baby! The Linux servers are running. I'll try to make a video by August 2025 explaining how you can port your Neocities website to Linux and run it on Apache or Nginx. And it can be done from the cloud as well. We're getting mesospheric!</p>
+
                      <div class="digimon-divider">
                          <p class="centering">
                             <img src="/assetsandimages/digimon/4f6f87_dd8f397e464e4864961aa7eabb4d6cea_mv2 (1).gif"><img src="/assetsandimages/digimon/4f6f87_d197b2afbecc43de99c93e309f720150_mv2.gif"><img src="assetsandimages/digimon/4f6f87_76d0088bb164438b96838ef7513d440e_mv2.gif"><img src="assetsandimages/digimon/4f6f87_0e0efd55441f4dd4ad333d15729e4092_mv2.gif"><img src="assetsandimages/digimon/4f6f87_30bd50064cb24e6bad0f9328436071f9_mv2.gif"><img src="assetsandimages/digimon/4f6f87_35f3e0d8e0864e90871d13e7a12d85b5_mv2.gif"><img src="assetsandimages/digimon/4f6f87_28156fdcb5c34ac78315b3f344d6c74c_mv2.gif">
@@ -94,6 +95,44 @@
                 /* colors */
                 --content: #43256E;
             }
+
+
+        /* Note for later: 
+        When we're long past May 1st, 2025 and the May 1st website status update is irrelevant, get rid of 
+        the two <p></p> tags, the .bougie-text CSS selector, and the "@keyframes move-bg" CSS selector.
+        */
+	   .bougie-text {
+	    --bg-size: 400%;
+	    --color-one: yellow;
+	    --color-two: rgb(221, 103, 0);
+	    font-size: clamp(1rem, 3rem, 5rem);
+	    padding-bottom: 0px;
+	    margin-bottom: 0px;
+	    background: linear-gradient(
+	                  90deg,
+        	          var(--color-one),
+        	          var(--color-two),
+	                  var(--color-one)
+                	  )  0 0 / var(--bg-size) 100%;
+  		  color: transparent;
+  		  -webkit-background-clip: text;
+   		 background-clip: text;
+   		 animation: move-bg 7s infinite linear;
+  	     }
+
+        @keyframes move-bg {
+        to {
+         background-position: var(--bg-size) 0;
+             }
+         }
+
+
+	    .removing-top-pad {
+		padding-top: 0px;
+		margin-top: 0px;
+	    }
+
+	
 
             @font-face {
                 font-family: Nunito;
